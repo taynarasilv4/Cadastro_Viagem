@@ -32,17 +32,15 @@
             lb_Nome = new Label();
             lb_CPF = new Label();
             lb_DataNascimento = new Label();
-            comboBox1 = new ComboBox();
-            lb_Bagagem = new Label();
             dateTimePicker1 = new DateTimePicker();
             masktx_Cpf = new MaskedTextBox();
             br_Cancelar = new Button();
             br_Salvar = new Button();
             dataGridView1 = new DataGridView();
+            button1 = new Button();
             label1 = new Label();
-            comboBox2 = new ComboBox();
             label2 = new Label();
-            label3 = new Label();
+            maskedTextBox1 = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -66,7 +64,7 @@
             // lb_CPF
             // 
             lb_CPF.AutoSize = true;
-            lb_CPF.Location = new Point(31, 97);
+            lb_CPF.Location = new Point(31, 112);
             lb_CPF.Name = "lb_CPF";
             lb_CPF.Size = new Size(33, 20);
             lb_CPF.TabIndex = 4;
@@ -75,34 +73,16 @@
             // lb_DataNascimento
             // 
             lb_DataNascimento.AutoSize = true;
-            lb_DataNascimento.Location = new Point(31, 153);
+            lb_DataNascimento.Location = new Point(31, 247);
             lb_DataNascimento.Name = "lb_DataNascimento";
             lb_DataNascimento.Size = new Size(145, 20);
             lb_DataNascimento.TabIndex = 5;
             lb_DataNascimento.Text = "Data de Nascimento";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Sim", "Não" });
-            comboBox1.Location = new Point(221, 208);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 6;
-            // 
-            // lb_Bagagem
-            // 
-            lb_Bagagem.AutoSize = true;
-            lb_Bagagem.Location = new Point(12, 216);
-            lb_Bagagem.Name = "lb_Bagagem";
-            lb_Bagagem.Size = new Size(203, 20);
-            lb_Bagagem.TabIndex = 7;
-            lb_Bagagem.Text = "Deseja Despachar Bagagem?";
-            lb_Bagagem.Click += lb_Bagagem_Click;
+            lb_DataNascimento.Click += lb_DataNascimento_Click;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(208, 148);
+            dateTimePicker1.Location = new Point(189, 247);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 8;
@@ -110,7 +90,7 @@
             // 
             // masktx_Cpf
             // 
-            masktx_Cpf.Location = new Point(208, 90);
+            masktx_Cpf.Location = new Point(208, 112);
             masktx_Cpf.Mask = "000,000,000-00";
             masktx_Cpf.Name = "masktx_Cpf";
             masktx_Cpf.Size = new Size(125, 27);
@@ -119,16 +99,17 @@
             // 
             // br_Cancelar
             // 
-            br_Cancelar.Location = new Point(538, 279);
+            br_Cancelar.Location = new Point(283, 309);
             br_Cancelar.Name = "br_Cancelar";
             br_Cancelar.Size = new Size(94, 29);
             br_Cancelar.TabIndex = 10;
             br_Cancelar.Text = "Cancelar";
             br_Cancelar.UseVisualStyleBackColor = true;
+            br_Cancelar.Click += br_Cancelar_Click;
             // 
             // br_Salvar
             // 
-            br_Salvar.Location = new Point(668, 279);
+            br_Salvar.Location = new Point(150, 309);
             br_Salvar.Name = "br_Salvar";
             br_Salvar.Size = new Size(94, 29);
             br_Salvar.TabIndex = 11;
@@ -138,65 +119,66 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 323);
+            dataGridView1.Location = new Point(12, 358);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(776, 115);
+            dataGridView1.Size = new Size(436, 150);
             dataGridView1.TabIndex = 12;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(31, 309);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 19;
+            button1.Text = "Concluir";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 263);
+            label1.Location = new Point(208, 142);
             label1.Name = "label1";
-            label1.Size = new Size(223, 20);
-            label1.TabIndex = 13;
-            label1.Text = "Qual é o peso da sua Bagagem?";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "0 ", "1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "10 ", "11 ", "12 ", "13 ", "14 ", "15 ", "16 ", "17 ", "18 ", "19 ", "20 ", "21 ", "22 ", "23 " });
-            comboBox2.Location = new Point(241, 255);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 14;
+            label1.Size = new Size(50, 20);
+            label1.TabIndex = 31;
+            label1.Text = "label1";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(526, 100);
+            label2.Location = new Point(31, 184);
             label2.Name = "label2";
-            label2.Size = new Size(0, 20);
-            label2.TabIndex = 16;
+            label2.Size = new Size(66, 20);
+            label2.TabIndex = 32;
+            label2.Text = "Telefone";
             // 
-            // label3
+            // maskedTextBox1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(514, 97);
-            label3.Name = "label3";
-            label3.Size = new Size(0, 20);
-            label3.TabIndex = 18;
+            maskedTextBox1.Location = new Point(208, 184);
+            maskedTextBox1.Mask = "(00) 00000-9999";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(125, 27);
+            maskedTextBox1.TabIndex = 34;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label3);
+            ClientSize = new Size(480, 520);
+            Controls.Add(maskedTextBox1);
             Controls.Add(label2);
-            Controls.Add(comboBox2);
             Controls.Add(label1);
+            Controls.Add(button1);
             Controls.Add(dataGridView1);
             Controls.Add(br_Salvar);
             Controls.Add(br_Cancelar);
             Controls.Add(masktx_Cpf);
             Controls.Add(dateTimePicker1);
-            Controls.Add(lb_Bagagem);
-            Controls.Add(comboBox1);
             Controls.Add(lb_DataNascimento);
             Controls.Add(lb_CPF);
             Controls.Add(lb_Nome);
@@ -215,16 +197,14 @@
         private Label lb_Nome;
         private Label lb_CPF;
         private Label lb_DataNascimento;
-        private ComboBox comboBox1;
-        private Label lb_Bagagem;
         private DateTimePicker dateTimePicker1;
         private MaskedTextBox masktx_Cpf;
         private Button br_Cancelar;
         private Button br_Salvar;
         private DataGridView dataGridView1;
+        private Button button1;
         private Label label1;
-        private ComboBox comboBox2;
         private Label label2;
-        private Label label3;
+        private MaskedTextBox maskedTextBox1;
     }
 }

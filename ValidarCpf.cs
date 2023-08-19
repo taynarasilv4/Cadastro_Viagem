@@ -8,7 +8,7 @@ namespace Cadastro_Check_in
 {
     internal class ValidarCpf
     {
-        public  bool ValidaCPF(string cpf)
+        public bool ValidaCPF(string cpf)
         {
             cpf = cpf.Replace(".", "");
             cpf = cpf.Replace("-", "");

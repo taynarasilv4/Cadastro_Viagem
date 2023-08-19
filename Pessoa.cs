@@ -5,24 +5,25 @@ internal class Pessoa
     public string Nome { get; set; }
 
     public string CPF { get; set; }
+    public string Telefone { get; set; }    
+    public int Idade { get; set; }
 
-    public int DataNascimento { get; set; }
-
-    public int Bagagem { get; set; }
+    
 
     public Pessoa()
     {
 
     }
 
-    public Pessoa(string nome, string cpf, int dataNascimento, int bagagem)
+    public Pessoa(string nome, string cpf, int idade, string telefone)
     {
         Nome = nome;
         CPF = cpf;
-        DataNascimento = dataNascimento;
-        Bagagem = bagagem;
+        Idade = idade;
+        Telefone = telefone;
+       
     }
-    public int Idade(int ano, int mes, int dia)
+    public int CalculoIdade(int ano, int mes, int dia)
     {
         int anoAtual = Convert.ToInt32(DateTime.Now.Year);
         int mesAtual = Convert.ToInt32(DateTime.Now.Month);
