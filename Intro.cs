@@ -22,5 +22,15 @@ namespace Cadastro_Check_in
             Form1 a = new Form1();
             a.ShowDialog();
         }
+
+        private void Intro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

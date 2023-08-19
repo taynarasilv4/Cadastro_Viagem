@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cadastro_Check_in
 {
@@ -21,28 +22,57 @@ namespace Cadastro_Check_in
         {
             try
             {
-                if (comboBox3.SelectedText != comboBox4.SelectedText)
+                if (cb_Origem.SelectedItem == null && cb_Destino.SelectedItem == null)
                 {
-                    comboBox3.Text = "";
-                    comboBox4.Text = "";
-                }
-                else if (comboBox4.SelectedText == null)
-                {
-                    comboBox4.Text = "";
-                    MessageBox.Show("Erro, destino não preenchido!");
-                }
-                else if (comboBox3.Text == null)
-                {
-                    comboBox3.Text = "";
-                    MessageBox.Show("Erro, origem não preenchido! ");
+                    MessageBox.Show("Erro, Você não selecionou a origem nem o destino");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro, a origem e o destino são iguais.");
+                MessageBox.Show("Erro: " + ex.Message);
             }
-            Pessoa p = new Pessoa();
-            int taxa = p.Taxa(Convert.ToInt32(comboBox2.Text));
+
+            try
+            {
+                if (cb_Origem.SelectedItem == cb_Destino.SelectedItem)
+                {
+                    MessageBox.Show("Erro, A origem e o destino são iguais");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+
+            }
+
+            try
+            {
+                if (cb_Origem.SelectedItem == null)
+                {
+                    MessageBox.Show("Erro, Origem não foi selecionada!");
+                }
+                else if (cb_Destino.SelectedItem == null)
+                {
+                    MessageBox.Show("Erro, Destino não foi selecionado!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            /*Ta certo mas tem que Arrumar a parte de quando coloca dois comboBox vazio 
+             * ele apresenta a mensagem de que "Você não selecionou a origem nem o destino" certo né, 
+             * mas depois quando eu aperto no OK ele aparece a seguinte mensagem " A origem e o destino são iguais",
+             * e também depois quando eu aperto no OK de novo aparece a seguinte mensagem "Origem não foi selecionada",
+             * e depois se eu apertar no OK de novo aparece a seguinte mensagem "Destino não foi selecionado".
+             * ou seja, ele anda o codigo todo só nesse exemplo que eu falei acima, tem que arrumar só essa parte!
+             */
+            //oi
+            string Dados = ($"\n Sua Escolha foi: {cb_Origem.Text} Data de Voo: {dateTimePicker2.Text}\n Seu Destino será: {cb_Destino.Text}  \nData de Volta: {dateTimePicker3.Text}\n O valor que você deverá pagar será:  \n{comboBox2}\n");
+
+            label8.Text = Dados;
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,7 +91,7 @@ namespace Cadastro_Check_in
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox4.SelectedItem != null)
+            if (cb_Destino.SelectedItem != null)
             {
                 dateTimePicker2.Visible = true;
                 label6.Visible = true;
@@ -110,5 +140,6 @@ namespace Cadastro_Check_in
         private void label7_Click(object sender, EventArgs e)
         {
         }
-    }
+    }//Pessoa p = new Pessoa();
+    //int taxa = p.Taxa(Convert.ToInt32(comboBox2.Text) * 5);
 }

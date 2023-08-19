@@ -99,7 +99,7 @@
             // 
             // br_Cancelar
             // 
-            br_Cancelar.Location = new Point(283, 309);
+            br_Cancelar.Location = new Point(354, 309);
             br_Cancelar.Name = "br_Cancelar";
             br_Cancelar.Size = new Size(94, 29);
             br_Cancelar.TabIndex = 10;
@@ -109,7 +109,7 @@
             // 
             // br_Salvar
             // 
-            br_Salvar.Location = new Point(150, 309);
+            br_Salvar.Location = new Point(189, 309);
             br_Salvar.Name = "br_Salvar";
             br_Salvar.Size = new Size(94, 29);
             br_Salvar.TabIndex = 11;

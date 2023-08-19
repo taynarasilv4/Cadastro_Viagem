@@ -36,7 +36,7 @@
             // 
             button1.BackColor = SystemColors.ControlLight;
             button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(353, 398);
+            button1.Location = new Point(379, 420);
             button1.Name = "button1";
             button1.Size = new Size(141, 41);
             button1.TabIndex = 0;
@@ -49,13 +49,14 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.LightGray;
+            label1.ForeColor = Color.DimGray;
             label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(233, 59);
+            label1.Location = new Point(210, 38);
             label1.Name = "label1";
             label1.Size = new Size(487, 62);
             label1.TabIndex = 1;
             label1.Text = "Cadrastro de Viagem";
+            label1.Click += label1_Click;
             // 
             // Intro
             // 
@@ -68,6 +69,7 @@
             Controls.Add(button1);
             Name = "Intro";
             Text = "Intro";
+            Load += Intro_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -92,12 +92,16 @@ namespace Cadastro_Check_in
 
         private void br_Cancelar_Click(object sender, EventArgs e)
         {
-            /* int index = dataGridView1.CurrentCell.RowIndex;
-             Cadastro.RemoveAt(index);
 
-             dataGridView1.DataSource = null;
-             dataGridView1.Refresh();
-             dataGridView1.DataSource = Cadastro; */
+            tx_Nome.Clear();
+            masktx_Cpf.Clear();
+            maskedTextBox1.Clear();
+            int index = dataGridView1.CurrentCell.RowIndex;
+            Cadastro.RemoveAt(index);
+
+            dataGridView1.DataSource = null;//zerar ou seja deixar sem nenhum elemento
+            dataGridView1.Refresh();//atualizar toda tabela
+            dataGridView1.DataSource = Cadastro;
         }
     }
 }
