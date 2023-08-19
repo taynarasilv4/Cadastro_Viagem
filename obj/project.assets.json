@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tayna_97l6kwx\\source\\repos\\Cadastro Check in\\Cadastro Check in\\Cadastro Check in.csproj",
+      "projectUniqueName": "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\3°Bimestre\\Cadastro Check in\\Cadastro Check in.csproj",
       "projectName": "Cadastro Check in",
-      "projectPath": "C:\\Users\\tayna_97l6kwx\\source\\repos\\Cadastro Check in\\Cadastro Check in\\Cadastro Check in.csproj",
+      "projectPath": "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\3°Bimestre\\Cadastro Check in\\Cadastro Check in.csproj",
       "packagesPath": "C:\\Users\\tayna_97l6kwx\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tayna_97l6kwx\\source\\repos\\Cadastro Check in\\Cadastro Check in\\obj\\",
+      "outputPath": "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\3°Bimestre\\Cadastro Check in\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
