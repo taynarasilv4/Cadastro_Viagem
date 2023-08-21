@@ -1,4 +1,5 @@
-﻿using System.Security.Policy;
+﻿using Newtonsoft.Json;
+using System.Security.Policy;
 
 internal class Pessoa
 {
@@ -8,8 +9,36 @@ internal class Pessoa
     public string Telefone { get; set; }    
     public int Idade { get; set; }
 
-    
+    public bool JsonSerializar(Pessoa pessoa, string path)
+    {
+        var strJson = JsonConvert.SerializeObject(pessoa);
+        return SaveFilePessoa(strJson, path);
 
+
+    }
+    public bool SaveFilePessoa(string strJson, string path)
+    {
+        try
+        {
+            using (StreamWriter sr = new StreamWriter(path))
+            {
+                sr.WriteLine(strJson);
+
+
+            }
+            return true;
+        }
+        catch (Exception at)
+        {
+            MessageBox.Show("Falha " + at.Message);
+            return false;
+        }
+        
+    }
+    public static Pessoa JsonDesserializar(string Json)
+    {
+        return JsonConvert.DeserializeObject<Pessoa>(Json);
+    }
     public Pessoa()
     {
 

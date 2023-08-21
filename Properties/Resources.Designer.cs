@@ -63,6 +63,16 @@ namespace Cadastro_Check_in.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1001596 {
+            get {
+                object obj = ResourceManager.GetObject("1001596", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_166006960_170667a {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-166006960-170667a", resourceCulture);
@@ -96,6 +106,17 @@ namespace Cadastro_Check_in.Properties {
         internal static System.Drawing.Bitmap OIP {
             get {
                 object obj = ResourceManager.GetObject("OIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_button_computer_icons_green_banner_electronics_3d_computer_graphics_rectangle {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-button-computer-icons-green-banner-electronics-3d-computer-graphi" +
+                        "cs-rectangle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

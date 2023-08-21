@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Cadastro_Check_in
 {
@@ -20,93 +21,102 @@ namespace Cadastro_Check_in
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Pessoa pessoa = new Pessoa();
             try
             {
+                Poltronacs info = new Poltronacs();
+                info.ShowDialog();
                 if (cb_Origem.SelectedItem == null && cb_Destino.SelectedItem == null)
                 {
-                    MessageBox.Show("Erro, Você não selecionou a origem nem o destino");
+                    MessageBox.Show("Erro, Você não selecionou a origem nem o destino", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                else if (cb_Origem.SelectedItem == cb_Destino.SelectedItem && cb_Destino.SelectedItem != null && cb_Origem.SelectedItem != null)
+                {
+                    MessageBox.Show("Erro, A origem e o destino são iguais", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (cb_Origem.SelectedItem == null && cb_Destino.SelectedItem != null)
+                {
+                    MessageBox.Show("Erro, Origem não foi selecionada!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (cb_Destino.SelectedItem == null && cb_Origem.SelectedItem != null)
+                {
+                    MessageBox.Show("Erro, Destino não foi selecionado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    label8.Text = "Lugar de origem selecionado: " + cb_Origem.Text;
+                    label9.Text = "Destino selecionado: " + cb_Destino.Text;
+
+                    label8.Visible = true;
+                    label9.Visible = true;
+                }
+
+                if (dateTimePicker2.Value <= dateTimePicker3.Value)
+                {
+                    DateTime dataIda = dateTimePicker2.Value;
+                    string IdaSomenteData = dataIda.ToShortDateString();
+
+                    DateTime dataVolta = dateTimePicker3.Value;
+                    string VoltaSomenteData = dataVolta.ToShortDateString();
+
+                    label10.Text = "Data de ida escolhida: " + IdaSomenteData;
+                    label11.Text = "Data de volta escolhida: " + VoltaSomenteData;
+
+                    label10.Visible = true;
+                    label11.Visible = true;
+
+                    //string dataIda = selectedDate.ToShortDateString();
+                }
+                else
+                {
+                    MessageBox.Show("Erro! Data de volta é anterior a data de ida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                int taxa = pessoa.Taxa(Convert.ToInt32(comboBox2.SelectedItem));
+
+                if (checkBox1.Checked)
+                {
+                    label12.Text = "Valor de taxa de bagagem a ser pago: R$ " + taxa + ",00";
+                    label12.Visible = true;
+                }
+                else
+                {
+                    taxa = 0;
+                    label12.Text = "Valor de taxa de bagagem a ser pago: R$ " + taxa + ",00";
+                    label12.Visible = true;
+                }
+
+                if (cb_Origem.SelectedItem != null && cb_Destino.SelectedItem != null && cb_Origem.SelectedItem != cb_Destino.SelectedItem
+                    && dateTimePicker2.Value <= dateTimePicker3.Value)
+                {
+                 MessageBox.Show($" Compra realizada com sucesso! Valor da passagem: R$ {(Convert.ToString(350 + taxa)),00}");
+                }
+                else
+                {
+                    MessageBox.Show("Compra não efetuada!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show("Erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            try
-            {
-                if (cb_Origem.SelectedItem == cb_Destino.SelectedItem)
-                {
-                    MessageBox.Show("Erro, A origem e o destino são iguais");
-                }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message);
+            //string Dados = ($"\n Sua Escolha foi: {cb_Origem.Text} Data de Voo: {dateTimePicker2.Text}\n Seu Destino será: {cb_Destino.Text}  \nData de Volta: {dateTimePicker3.Text}\n O valor que você deverá pagar será:  \n{comboBox2}\n");
 
-            }
+            //label8.Text = Dados;
 
-            try
-            {
-                if (cb_Origem.SelectedItem == null)
-                {
-                    MessageBox.Show("Erro, Origem não foi selecionada!");
-                }
-                else if (cb_Destino.SelectedItem == null)
-                {
-                    MessageBox.Show("Erro, Destino não foi selecionado!");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message);
-            }
-            /*Ta certo mas tem que Arrumar a parte de quando coloca dois comboBox vazio 
-             * ele apresenta a mensagem de que "Você não selecionou a origem nem o destino" certo né, 
-             * mas depois quando eu aperto no OK ele aparece a seguinte mensagem " A origem e o destino são iguais",
-             * e também depois quando eu aperto no OK de novo aparece a seguinte mensagem "Origem não foi selecionada",
-             * e depois se eu apertar no OK de novo aparece a seguinte mensagem "Destino não foi selecionado".
-             * ou seja, ele anda o codigo todo só nesse exemplo que eu falei acima, tem que arrumar só essa parte!
-             */
-            //oi
-            string Dados = ($"\n Sua Escolha foi: {cb_Origem.Text} Data de Voo: {dateTimePicker2.Text}\n Seu Destino será: {cb_Destino.Text}  \nData de Volta: {dateTimePicker3.Text}\n O valor que você deverá pagar será:  \n{comboBox2}\n");
-
-            label8.Text = Dados;
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "Sim")
-            {
-                comboBox2.Visible = true;
-                label1.Visible = true;
-            }
-            else
-            {
-                comboBox2.Visible = false;
-                label1.Visible = false;
-            }
+
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cb_Destino.SelectedItem != null)
-            {
-                dateTimePicker2.Visible = true;
-                label6.Visible = true;
-                dateTimePicker3.Visible = true;
-                label7.Visible = true;
-
-            }
-            else
-            {
-                dateTimePicker2.Visible = false;
-                label6.Visible = false;
-                dateTimePicker3.Visible = false;
-                label7.Visible = false;
-
-            }
 
 
         }
@@ -121,6 +131,17 @@ namespace Cadastro_Check_in
         {
             dateTimePicker3.MinDate = DateTime.Now;
             dateTimePicker3.MaxDate = DateTime.Now.AddMonths(1);
+            try
+            {
+                if (dateTimePicker3.Value < dateTimePicker2.Value)
+                {
+                    MessageBox.Show("Erro! Data de volta é anterior a data de ida");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro!" + ex.Message);
+            }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -140,6 +161,34 @@ namespace Cadastro_Check_in
         private void label7_Click(object sender, EventArgs e)
         {
         }
-    }//Pessoa p = new Pessoa();
-    //int taxa = p.Taxa(Convert.ToInt32(comboBox2.Text) * 5);
-}
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                comboBox2.Visible = true;
+                label1.Visible = true;
+            }
+            else
+            {
+                comboBox2.Visible = false;
+                label1.Visible = false;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cb_Origem.Text = "";
+            cb_Destino.Text = "";
+            comboBox2.Text = "";
+
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+        }
+    }
+}//Pessoa p = new Pessoa();
+ //int taxa = p.Taxa(Convert.ToInt32(comboBox2.Text) * 5);
+

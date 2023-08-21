@@ -30,15 +30,17 @@
         {
             button1 = new Button();
             label1 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
             button1.BackColor = SystemColors.ControlLight;
             button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(379, 420);
+            button1.Location = new Point(319, 259);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(141, 41);
+            button1.Size = new Size(123, 35);
             button1.TabIndex = 0;
             button1.Text = "Entrar";
             button1.UseVisualStyleBackColor = false;
@@ -51,22 +53,36 @@
             label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.DimGray;
             label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(210, 38);
+            label1.Location = new Point(184, 28);
             label1.Name = "label1";
-            label1.Size = new Size(487, 62);
+            label1.Size = new Size(396, 51);
             label1.TabIndex = 1;
             label1.Text = "Cadrastro de Viagem";
             label1.Click += label1_Click;
             // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(319, 309);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(123, 34);
+            button2.TabIndex = 2;
+            button2.Text = "Sair";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Intro
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.viagem_aeroporto_resultado_960x640_c;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(863, 520);
+            ClientSize = new Size(714, 390);
+            Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(button1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Intro";
             Text = "Intro";
             Load += Intro_Load;
@@ -78,5 +94,6 @@
 
         private Button button1;
         private Label label1;
+        private Button button2;
     }
 }

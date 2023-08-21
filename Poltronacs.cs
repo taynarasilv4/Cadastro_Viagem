@@ -10,33 +10,28 @@ using System.Windows.Forms;
 
 namespace Cadastro_Check_in
 {
-    public partial class Intro : Form
+    public partial class Poltronacs : Form
     {
-        public Intro()
+        private Random random = new Random();
+        public Poltronacs()
         {
             InitializeComponent();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Poltronacs_Load(object sender, EventArgs e)
         {
-            Form1 a = new Form1();
-            a.ShowDialog();
-        }
-
-        private void Intro_Load(object sender, EventArgs e)
-        {
-            
 
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            int randomPosition = random.Next(100); // Gera um número aleatório entre 0 e 99
+            label1.Text = $"Poltrona: {randomPosition}";
         }
     }
 }
