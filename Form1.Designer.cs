@@ -41,12 +41,13 @@
             label1 = new Label();
             label2 = new Label();
             maskedTextBox1 = new MaskedTextBox();
+            bt_desserilhar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // tx_Nome
             // 
-            tx_Nome.Location = new Point(208, 36);
+            tx_Nome.Location = new Point(87, 33);
             tx_Nome.Name = "tx_Nome";
             tx_Nome.Size = new Size(125, 27);
             tx_Nome.TabIndex = 0;
@@ -55,7 +56,7 @@
             // lb_Nome
             // 
             lb_Nome.AutoSize = true;
-            lb_Nome.Location = new Point(31, 39);
+            lb_Nome.Location = new Point(31, 36);
             lb_Nome.Name = "lb_Nome";
             lb_Nome.Size = new Size(50, 20);
             lb_Nome.TabIndex = 3;
@@ -64,7 +65,7 @@
             // lb_CPF
             // 
             lb_CPF.AutoSize = true;
-            lb_CPF.Location = new Point(31, 112);
+            lb_CPF.Location = new Point(36, 112);
             lb_CPF.Name = "lb_CPF";
             lb_CPF.Size = new Size(33, 20);
             lb_CPF.TabIndex = 4;
@@ -90,7 +91,7 @@
             // 
             // masktx_Cpf
             // 
-            masktx_Cpf.Location = new Point(208, 112);
+            masktx_Cpf.Location = new Point(75, 109);
             masktx_Cpf.Mask = "000,000,000-00";
             masktx_Cpf.Name = "masktx_Cpf";
             masktx_Cpf.Size = new Size(125, 27);
@@ -99,7 +100,7 @@
             // 
             // br_Cancelar
             // 
-            br_Cancelar.Location = new Point(354, 309);
+            br_Cancelar.Location = new Point(361, 309);
             br_Cancelar.Name = "br_Cancelar";
             br_Cancelar.Size = new Size(94, 29);
             br_Cancelar.TabIndex = 10;
@@ -109,7 +110,7 @@
             // 
             // br_Salvar
             // 
-            br_Salvar.Location = new Point(189, 309);
+            br_Salvar.Location = new Point(130, 309);
             br_Salvar.Name = "br_Salvar";
             br_Salvar.Size = new Size(94, 29);
             br_Salvar.TabIndex = 11;
@@ -131,7 +132,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(31, 309);
+            button1.Location = new Point(12, 309);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 19;
@@ -142,7 +143,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(208, 142);
+            label1.Location = new Point(75, 139);
             label1.Name = "label1";
             label1.Size = new Size(50, 20);
             label1.TabIndex = 31;
@@ -159,17 +160,29 @@
             // 
             // maskedTextBox1
             // 
-            maskedTextBox1.Location = new Point(208, 184);
+            maskedTextBox1.Location = new Point(109, 181);
             maskedTextBox1.Mask = "(00) 00000-9999";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(125, 27);
             maskedTextBox1.TabIndex = 34;
             // 
+            // bt_desserilhar
+            // 
+            bt_desserilhar.Location = new Point(250, 309);
+            bt_desserilhar.Name = "bt_desserilhar";
+            bt_desserilhar.Size = new Size(94, 29);
+            bt_desserilhar.TabIndex = 35;
+            bt_desserilhar.Text = "Restaurar";
+            bt_desserilhar.UseVisualStyleBackColor = true;
+            bt_desserilhar.Click += bt_desserilhar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(480, 520);
+            Controls.Add(bt_desserilhar);
             Controls.Add(maskedTextBox1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -206,5 +219,6 @@
         private Label label1;
         private Label label2;
         private MaskedTextBox maskedTextBox1;
+        private Button bt_desserilhar;
     }
 }

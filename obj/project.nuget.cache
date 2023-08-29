@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aEOeETH7KjR0qWOtF4Kas6Ihr4h+w39IgLQiZncApYkytyFP1aV06M52TJoBmL0OHcP2VFdETTBn/OXRrV3u1Q==",
+  "dgSpecHash": "bIy2g29AV3zfw3+WjvqOI3sb15+Lh8/0BIQveNz/9eUD9l0ZncUNG9fS1IedNzNiZe2gJqzIQdoRxKqR2eXWeA==",
   "success": true,
   "projectFilePath": "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\repos\\Cadastro de Viagem\\Cadastro_Viagem\\Cadastro Check in.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\tayna_97l6kwx\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

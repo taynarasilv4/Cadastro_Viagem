@@ -40,10 +40,14 @@
             label2 = new Label();
             comboBox2 = new ComboBox();
             label1 = new Label();
-            lb_Bagagem = new Label();
-            comboBox1 = new ComboBox();
             button1 = new Button();
             label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            checkBox1 = new CheckBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label7
@@ -72,14 +76,16 @@
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.Size = new Size(250, 27);
             dateTimePicker3.TabIndex = 40;
+            dateTimePicker3.Value = new DateTime(2023, 8, 20, 0, 0, 0, 0);
             dateTimePicker3.ValueChanged += dateTimePicker3_ValueChanged;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(458, 61);
+            dateTimePicker2.Location = new Point(470, 61);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(250, 27);
             dateTimePicker2.TabIndex = 39;
+            dateTimePicker2.Value = new DateTime(2023, 8, 20, 0, 0, 0, 0);
             dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
             // cb_Destino
@@ -149,31 +155,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(64, 190);
+            label1.Location = new Point(55, 190);
             label1.Name = "label1";
             label1.Size = new Size(223, 20);
             label1.TabIndex = 31;
             label1.Text = "Qual é o peso da sua Bagagem?";
             label1.Visible = false;
-            // 
-            // lb_Bagagem
-            // 
-            lb_Bagagem.AutoSize = true;
-            lb_Bagagem.Location = new Point(64, 150);
-            lb_Bagagem.Name = "lb_Bagagem";
-            lb_Bagagem.Size = new Size(203, 20);
-            lb_Bagagem.TabIndex = 30;
-            lb_Bagagem.Text = "Deseja Despachar Bagagem?";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Sim", "Não" });
-            comboBox1.Location = new Point(301, 147);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 29;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // button1
             // 
@@ -188,17 +175,86 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(64, 225);
+            label8.Location = new Point(55, 243);
             label8.Name = "label8";
             label8.Size = new Size(50, 20);
             label8.TabIndex = 44;
             label8.Text = "label8";
+            label8.Visible = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(55, 275);
+            label9.Name = "label9";
+            label9.Size = new Size(50, 20);
+            label9.TabIndex = 45;
+            label9.Text = "label9";
+            label9.Visible = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(55, 307);
+            label10.Name = "label10";
+            label10.Size = new Size(58, 20);
+            label10.TabIndex = 46;
+            label10.Text = "label10";
+            label10.Visible = false;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(55, 340);
+            label11.Name = "label11";
+            label11.Size = new Size(58, 20);
+            label11.TabIndex = 47;
+            label11.Text = "label11";
+            label11.Visible = false;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(55, 374);
+            label12.Name = "label12";
+            label12.Size = new Size(58, 20);
+            label12.TabIndex = 48;
+            label12.Text = "label12";
+            label12.Visible = false;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(55, 152);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(163, 24);
+            checkBox1.TabIndex = 49;
+            checkBox1.Text = "Adicionar bagagem";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(521, 395);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 50;
+            button2.Text = "Fechar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // InfoVoo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(checkBox1);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(button1);
             Controls.Add(label7);
@@ -213,8 +269,6 @@
             Controls.Add(label2);
             Controls.Add(comboBox2);
             Controls.Add(label1);
-            Controls.Add(lb_Bagagem);
-            Controls.Add(comboBox1);
             Name = "InfoVoo";
             Text = "InfoVoo";
             Load += InfoVoo_Load;
@@ -236,9 +290,14 @@
         private Label label2;
         private ComboBox comboBox2;
         private Label label1;
-        private Label lb_Bagagem;
-        private ComboBox comboBox1;
         private Button button1;
         private Label label8;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private Label label12;
+        private CheckBox checkBox1;
+        private Label label13;
+        private Button button2;
     }
 }

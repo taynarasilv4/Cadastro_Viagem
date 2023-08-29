@@ -30,6 +30,7 @@
         {
             button1 = new Button();
             label1 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -58,6 +59,15 @@
             label1.Text = "Cadrastro de Viagem";
             label1.Click += label1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(422, 332);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 2;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Intro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -65,6 +75,7 @@
             BackgroundImage = Properties.Resources.viagem_aeroporto_resultado_960x640_c;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(863, 520);
+            Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(button1);
             Name = "Intro";
@@ -78,5 +89,6 @@
 
         private Button button1;
         private Label label1;
+        private Button button2;
     }
 }
