@@ -62,6 +62,7 @@
             // 
             // button2
             // 
+<<<<<<< HEAD:TELINHAS/Intro.Designer.cs
             button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Location = new Point(319, 309);
             button2.Margin = new Padding(3, 2, 3, 2);
@@ -71,6 +72,14 @@
             button2.Text = "Sair";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+=======
+            button2.Location = new Point(422, 332);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 2;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+>>>>>>> 1efd8e3e75077c7eb3c2207aec59579a0938ba30:Intro.Designer.cs
             // 
             // Intro
             // 
@@ -78,7 +87,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.viagem_aeroporto_resultado_960x640_c;
             BackgroundImageLayout = ImageLayout.Stretch;
+<<<<<<< HEAD:TELINHAS/Intro.Designer.cs
             ClientSize = new Size(714, 390);
+=======
+            ClientSize = new Size(863, 520);
+>>>>>>> 1efd8e3e75077c7eb3c2207aec59579a0938ba30:Intro.Designer.cs
             Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(button1);

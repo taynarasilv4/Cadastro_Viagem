@@ -14,4 +14,12 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Cadastro_Check_in
+<<<<<<< HEAD
 build_property.ProjectDir = D:\Cadastro_Viagem20231\
+=======
+<<<<<<< HEAD
+build_property.ProjectDir = C:\Users\tayna_97l6kwx\OneDrive\Documentos\repos\Cadastro de Viagem\Cadastro_Viagem\
+=======
+build_property.ProjectDir = C:\Users\tayna_97l6kwx\OneDrive\Documentos\3°Bimestre\Cadastro Check in\
+>>>>>>> 68dac948af92b6d181696b943769c35da33c7384
+>>>>>>> 1efd8e3e75077c7eb3c2207aec59579a0938ba30

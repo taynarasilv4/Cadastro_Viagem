@@ -1,7 +1,12 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Cadastro_Viagem20231\\Cadastro Check in.csproj": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\repos\\Cadastro de Viagem\\Cadastro_Viagem\\Cadastro Check in.csproj": {}
+>>>>>>> 1efd8e3e75077c7eb3c2207aec59579a0938ba30
   },
   "projects": {
     "D:\\Cadastro_Viagem20231\\Cadastro Check in.csproj": {
@@ -11,7 +16,24 @@
         "projectName": "Cadastro Check in",
         "projectPath": "D:\\Cadastro_Viagem20231\\Cadastro Check in.csproj",
         "packagesPath": "C:\\Users\\tayna_97l6kwx\\.nuget\\packages\\",
+<<<<<<< HEAD
         "outputPath": "D:\\Cadastro_Viagem20231\\obj\\",
+=======
+        "outputPath": "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\repos\\Cadastro de Viagem\\Cadastro_Viagem\\obj\\",
+=======
+    "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\3°Bimestre\\Cadastro Check in\\Cadastro Check in.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\3°Bimestre\\Cadastro Check in\\Cadastro Check in.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\3°Bimestre\\Cadastro Check in\\Cadastro Check in.csproj",
+        "projectName": "Cadastro Check in",
+        "projectPath": "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\3°Bimestre\\Cadastro Check in\\Cadastro Check in.csproj",
+        "packagesPath": "C:\\Users\\tayna_97l6kwx\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tayna_97l6kwx\\OneDrive\\Documentos\\3°Bimestre\\Cadastro Check in\\obj\\",
+>>>>>>> 68dac948af92b6d181696b943769c35da33c7384
+>>>>>>> 1efd8e3e75077c7eb3c2207aec59579a0938ba30
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
