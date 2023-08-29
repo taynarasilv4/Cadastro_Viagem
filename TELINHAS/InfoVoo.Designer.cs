@@ -51,6 +51,7 @@
             button2 = new Button();
             panel1 = new Panel();
             label14 = new Label();
+            button3 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -152,8 +153,8 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "0 ", "1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "10 ", "11 ", "12 ", "13 ", "14 ", "15 ", "16 ", "17 ", "18 ", "19 ", "20 ", "21 ", "22 ", "23 " });
-            comboBox2.Location = new Point(263, 140);
+            comboBox2.Items.AddRange(new object[] { "0,5 ", "1", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9", "10", "11 ", "12 ", "13 ", "14 ", "15 ", "16 ", "17 ", "18 ", "19 ", "20 ", "21 ", "22 ", "23 ", "24 ", "25 " });
+            comboBox2.Location = new Point(290, 62);
             comboBox2.Margin = new Padding(3, 2, 3, 2);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(133, 23);
@@ -259,10 +260,10 @@
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.InactiveCaptionText;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(549, 181);
+            button2.Location = new Point(549, 179);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(127, 41);
+            button2.Size = new Size(127, 36);
             button2.TabIndex = 50;
             button2.Text = "Cancelar";
             button2.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -278,6 +279,7 @@
             panel1.Controls.Add(label12);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(label11);
+            panel1.Controls.Add(comboBox2);
             panel1.Location = new Point(-38, 80);
             panel1.Name = "panel1";
             panel1.Size = new Size(478, 296);
@@ -293,12 +295,24 @@
             label14.TabIndex = 52;
             label14.Text = "Ticket";
             // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(549, 142);
+            button3.Name = "button3";
+            button3.Size = new Size(127, 31);
+            button3.TabIndex = 53;
+            button3.Text = "Poltrona";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // InfoVoo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(700, 338);
+            Controls.Add(button3);
             Controls.Add(label14);
             Controls.Add(button2);
             Controls.Add(checkBox1);
@@ -313,7 +327,6 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(comboBox2);
             Controls.Add(label1);
             Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
@@ -351,5 +364,6 @@
         private Button button2;
         private Panel panel1;
         private Label label14;
+        private Button button3;
     }
 }

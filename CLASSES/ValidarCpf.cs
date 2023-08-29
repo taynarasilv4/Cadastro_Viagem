@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Cadastro_Check_in
+namespace Cadastro_Check_in.CLASSES
 {
     internal class ValidarCpf
     {
@@ -69,6 +70,8 @@ namespace Cadastro_Check_in
             {
                 return false;
             }
+            
         }
+
     }
 }

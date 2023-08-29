@@ -12,11 +12,11 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Familia Torrente ^-^\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Familia Torrente ^-^\\.nuget\\packages"
+      "C:\\Users\\tayna_97l6kwx\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\tayna_97l6kwx\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
-      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }
